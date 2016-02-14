@@ -1,0 +1,14 @@
+[Install]
+WantedBy=multi-user.target
+
+[Unit]
+Description=kernel kmsg to network
+Description=netconsole-wrapper
+Requires=network.target
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/netconsole-wrapper
+
+[Install]
+WantedBy=multi-user.target
